@@ -72,19 +72,19 @@ function draw() {
     
     /*if(blueBubbleGroup.(bulletGroup)){
       handleBubbleCollision(blueBubbleGroup);
-    } */
+    }*/
 
-    if(blueBubbleGroup.collide(bulletGroup)){
+    /*if(blueBubbleGroup.collide(bulletGroup)){
       handleBubbleCollision();
-    }
+    }*/
     
     /*if(blueBubbleGroup.collide()){
       handleBubbleCollision(blueBubbleGroup);
     }*/
     
-    /*if(blueBubbleGroup.collide(bulletGroup)){
+    if(blueBubbleGroup.collide(bulletGroup)){
       handleBubbleCollision(blueBubbleGroup);
-    }*/
+    }
 
     if(redBubbleGroup.collide(bulletGroup)){
       handleBubbleCollision(redBubbleGroup);
@@ -128,7 +128,7 @@ function handleBubbleCollision(bubbleGroup){
     }
 
      blast= createSprite(bullet.x+60, bullet.y, 50,50);
-    blast.addImage(blastImg) 
+    blast.addImage(blastImg);
 
     /* blast= sprite(bullet.x+60, bullet.y, 50,50);
     blast.addImage(blastImg) */
@@ -140,11 +140,10 @@ function handleBubbleCollision(bubbleGroup){
     image(blastImg) */
     
     blast.scale=0.3
-    blast.life=2
+    blast.life=20
     bulletGroup.destroyEach()
-   // bubbleGroup.destroyEach()
+    bubbleGroup.destroyEach()
 }
-
 
 function handleGameover(bubbleGroup){
   
